@@ -169,7 +169,7 @@ class FacePP
           req.body = form.inspect
           req['Content-Length'] = req.body.size
         end
-        res = Net::HTTP.new('apicn.faceplusplus.com').request(req).body
+        res = Net::HTTP.new('apius.faceplusplus.com').request(req).body
         decode ? JSON.load(res) : res
       end
     end
